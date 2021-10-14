@@ -49,7 +49,7 @@ server <- function(input, output) {
                     "Percent Asian" = "darkviolet")
     
     legend <- switch(input$var, 
-                     "Percent White" = "% White",
+                     "Percent White" = "% White", 
                      "Percent Black" = "% Black",
                      "Percent Hispanic" = "% Hispanic",
                      "Percent Asian" = "% Asian")
@@ -62,4 +62,4 @@ server <- function(input, output) {
 }
 
 # Run app ----
-shinyApp(ui, server)
+shinyApp(ui, server)#
