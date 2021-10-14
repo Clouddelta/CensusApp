@@ -29,7 +29,7 @@ ui <- fluidPage(
                   min = 0, max = 100, value = c(0, 100))
     ),
     
-    mainPanel(h3(textOutput("range")),plotOutput("map"))
+    mainPanel(h3(textOutput("ll")),plotOutput("map"))
   )
 )
 
@@ -56,7 +56,7 @@ server <- function(input, output) {
     
     percent_map(data, color, legend, input$range[1], input$range[2])
   })
-  output$range= renderText({ 
+  output$ll= renderText({ 
     paste("You have selected", input$var,'range from',input$range[1],'to',input$range[2])
   })
 }
